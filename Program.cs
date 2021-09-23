@@ -9,10 +9,9 @@ namespace files_module
         static void Main(string[] args)
         {
             var currentDirectory = Directory.GetCurrentDirectory();
-
             var storesDirectory = Path.Combine(currentDirectory, "stores");
 
-            var salesFiles = FindFiles("stores");
+            var salesFiles = FindFiles(storesDirectory);
 
             foreach (var file in salesFiles)
             {
@@ -28,10 +27,10 @@ namespace files_module
     
             foreach (var file in foundFiles)
             {
-                if (file.EndsWith("sales.json"))
-                {
-                    salesFiles.Add(file);
-                }
+                var extention = Path.GetExtention(file);
+
+                if (extention == ".json")
+                    salesFiles.Add(file);                
             }
     
             return salesFiles;
