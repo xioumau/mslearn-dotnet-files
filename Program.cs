@@ -11,12 +11,10 @@ namespace files_module
             var currentDirectory = Directory.GetCurrentDirectory();
             var storesDirectory = Path.Combine(currentDirectory, "stores");
 
-            var salesFiles = FindFiles(storesDirectory);
+            var salesTotalDir = Path.Combine(currentDirectory, "salesTotalDir")
+            Directory.CreateDirectory(salesTotalDir)
 
-            foreach (var file in salesFiles)
-            {
-                Console.WriteLine(file);
-            }
+            var salesFiles = FindFiles(storesDirectory);
         }
 
         static IEnumerable<string> FindFiles(string folderName)
