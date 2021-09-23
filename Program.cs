@@ -15,6 +15,8 @@ namespace files_module
             Directory.CreateDirectory(salesTotalDir)
 
             var salesFiles = FindFiles(storesDirectory);
+
+            File.WriteAllText(Path.Combine(salesTotalDir, "total.txt"), String.Empty);
         }
 
         static IEnumerable<string> FindFiles(string folderName)
