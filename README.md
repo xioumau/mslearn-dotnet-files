@@ -1,31 +1,17 @@
+# Trabalhar com arquivos e diretórios em um aplicativo .NET
 
-# Contributing
+Projeto desenvolvido com objetivo de estudo. Guiado pelo roteiro de estudo em docs.microsoft.com/learn.
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
+## Objetivos de aprendizagem
 
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
+- Trabalhar com diretórios.
+- Criar e excluir arquivos.
+- Fazer a leitura dos arquivos.
+- Gravar em arquivos.
+- Análise de dados nos arquivos.
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+## Pontos a considerar
 
-# Legal Notices
+- Directory.EnumerateDirectories e Directory.EnumerateFiles aceitam um parâmetro que habilita a especificação de um critério de pesquisa para os nomes a serem retornados e um parâmetro para percorrer recursivamente todos os diretórios filho.
 
-Microsoft and any contributors grant you a license to the Microsoft documentation and other content
-in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode),
-see the [LICENSE](LICENSE) file, and grant you a license to any code in the repository under the [MIT License](https://opensource.org/licenses/MIT), see the
-[LICENSE-CODE](LICENSE-CODE) file.
-
-Microsoft, Windows, Microsoft Azure and/or other Microsoft products and services referenced in the documentation
-may be either trademarks or registered trademarks of Microsoft in the United States and/or other countries.
-The licenses for this project do not grant you rights to use any Microsoft names, logos, or trademarks.
-Microsoft's general trademark guidelines can be found at http://go.microsoft.com/fwlink/?LinkID=254653.
-
-Privacy information can be found at https://privacy.microsoft.com/en-us/
-
-Microsoft and any contributors reserve all other rights, whether under their respective copyrights, patents,
-or trademarks, whether by implication, estoppel or otherwise.
+- System.Environment.SpecialFolder é uma enumeração que habilita o acesso às pastas definidas pelo sistema, como a área de trabalho ou o perfil do usuário, multiplataforma, sem ter que memorizar o caminho exato em cada sistema operacional. 
