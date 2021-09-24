@@ -14,12 +14,15 @@ namespace files_module
             var currentDirectory = Directory.GetCurrentDirectory();
             var storesDirectory = Path.Combine(currentDirectory, "stores");
 
-            var salesTotalDir = Path.Combine(currentDirectory, "salesTotalDir")
-            Directory.CreateDirectory(salesTotalDir)
+            var salesTotalDir = Path.Combine(currentDirectory, "salesTotalDir");
+            Directory.CreateDirectory(salesTotalDir);
 
             var salesFiles = FindFiles(storesDirectory);
 
-            File.WriteAllText(Path.Combine(salesTotalDir, "total.txt"), String.Empty);
+            // chama o método para o cálculo do total de vendas
+            var salesTotal = CalculateSalesTotal(salesFiles);
+
+            File.AppendAllText(Path.Combine(salesTotalDir, "total.txt"), $"{salesTotal}{Environment.NewLine}");
         }
 
         static IEnumerable<string> FindFiles(string folderName)
