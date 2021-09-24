@@ -1,6 +1,9 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
+// adicionar Json ao projeto
+// dotnet add package Newtonsoft.Json 
+using Newtonsoft.Json; 
 
 namespace files_module
 {
