@@ -42,11 +42,6 @@ namespace files_module
             return salesFiles;
         }
 
-        class SalesData
-        {
-            public double Total { get; set; }
-        }
-
         public double CalculateSalesTotal(IEnumerable<String> salesFiles)
         {
             double salesTotal = 0;
@@ -66,5 +61,11 @@ namespace files_module
 
             return salesTotal
         }
+
+        class SalesData
+        {
+            public double Total { get; set; }
+        }
+        
     }
 }
